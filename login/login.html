@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static '../static/css/login.css' %}" type="text/css" >
+</head>
+<body class="container">
+    <div class="wrapper">
+        <h1 class="">Welcome</h1>
+        <form action="login/" method="post">
+            {% if message %}
+                <div class="alert-warning">{{ message }}</div>
+            {% endif %}
+            {% csrf_token %}
+            <input type="text" name="username" id="Username" placeholder="Username" autofocus required>
+            <input type="password" name="password" id="Password" placeholder="Password" required>
+            <button type="submit" onclick="javascript:window.location.href='http://www.baidu.com'">submit</button>
+            <br>
+            <input type="button" value="Sign Up" onclick="javascript:window.location.href='../login/register.html'">
+        </form>
+    </div>
+</body>
+</html>
