@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35109dce-6971-4dae-bde9-18693a4b76f2" name="Default Changelist" comment="" />
+    <list default="true" id="35109dce-6971-4dae-bde9-18693a4b76f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftwareProjects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareProjects/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login/login.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +29,14 @@
   <component name="ProjectId" id="1ZTTfvRrsmgW5SFPAUGM2y4onPh" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EC-master" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\pycharm\test\static\css\login" />
+      <recent name="D:\projects\pycharm\test\login\templates\login" />
+      <recent name="D:\projects\pycharm\test\login\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,6 +89,7 @@
       <workItem from="1584862204423" duration="924000" />
       <workItem from="1584874345940" duration="1178000" />
       <workItem from="1584879053189" duration="2893000" />
+      <workItem from="1586655891706" duration="3208000" />
     </task>
     <servers />
   </component>
