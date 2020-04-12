@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="/static/css/login/register.css" type="text/css" >
+</head>
+<body>
+    <div class="demo" id="demo-5">
+        <div><p>青年租房网站</p></div>
+    </div>
+    <div class="container">
+        <h1>欢迎注册</h1><br>
+        <P id="p1"><a href="Temp.html">已经拥有账号？登录</a></P><br>
+        <form action="register/" method="post" target="_top">
+            <p id="p2">邮箱地址</p>
+            <input type="email" id="Email" autofocus required="required"><br>
+            <p id="p2">用户名</p>
+            <input type="text" id="Username" required="required"><br>
+            <p id="p2">密码</p>
+            <input type="password" id="pw1" required="required"><br>
+            <p id="p2">确认密码</p>
+            <input type="password" id="pw2" required="required" onkeyup="validate()"><span id="tishi"></span><br>
+            <div class="input1">
+                <input id="input1" type="submit" onclick="window.location.href='./login.html'" value="注册" id="Submit"/>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validate(){
+            var pw1=document.getElementById("pw1").value;
+            var pw2=document.getElementById("pw2").value;
+            if(pw1==pw2){
+                document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
+                document.getElementById("Submit").disabled=false;
+            }
+            else {
+                document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
+                document.getElementById("Submit").disabled=true;
+            }
+        }
+    </script>
+</body>
+</html>
