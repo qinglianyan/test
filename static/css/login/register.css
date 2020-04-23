@@ -118,3 +118,18 @@ form button{
 form button:hover{
     background-color: black;
 }
+.alert-warning{
+    text-align: center;
+    line-height: 40px;
+    background: #fff6e3;
+    top:300px;
+    width: 250px;
+    height: 40px;
+    color: brown;
+    border-radius: 3px;
+    position: absolute;
+    right: 20%;
+    font-size:18px;
+    font-weight: 300;
+    margin: 0 auto 10px auto;
+}
