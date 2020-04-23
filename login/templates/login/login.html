@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    {% load staticfiles %}
     <link  href="/static/css/login/login.css" rel="stylesheet">
 </head>
 <body class="container">
     <div class="wrapper">
         <h1 class="">Welcome</h1>
-        <form action="" method="post">
+        <form  action={% url 'login' %} method="post">
             {% if message %}
                 <div class="alert-warning">{{ message }}</div>
             {% endif %}
@@ -18,7 +17,7 @@
             <input type="password" name="password" id="Password" placeholder="Password" required>
             <button type="submit" onclick="javascript:window.location.href='http://www.baidu.com'">submit</button>
             <br>
-            <input type="button" value="Sign Up" onclick="javascript:window.location.href='../login/register.html'">
+            <input type="button" value="Sign Up" onclick="javascript:window.location.href='../login/register'">
         </form>
     </div>
 </body>

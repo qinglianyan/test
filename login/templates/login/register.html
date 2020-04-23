@@ -12,24 +12,22 @@
     </div>
     <div class="container">
         <h1>欢迎注册</h1><br>
-        <P id="p1"><a href="./login.html">已经拥有账号？登录</a></P><br>
-        <form action="register/" method="post" target="_top">
-            {% if message %}
-                <div class="alert-warning">{{ message }}</div>
-            {% endif %}
+        <P id="p1"><a href="..">已经拥有账号？登录</a></P><br>
+        <form class="form-register" action="{%url 'register'%}" method="post" >
             {% csrf_token %}
             <p id="p2">邮箱地址</p>
-            <input type="email" id="Email" autofocus required="required"><br>
+            <input type="email" name="email" autofocus required="required"><br>
             <p id="p2">用户名</p>
-            <input type="text" id="Username" required="required"><br>
+            <input type="text" name="username" required="required"><br>
             <p id="p2">密码</p>
-            <input type="password" id="pw1" required="required"><br>
+            <input type="password" name="password1" required="required"><br>
             <p id="p2">确认密码</p>
-            <input type="password" id="pw2" required="required"><span id="tishi"></span><br>
-            <div class="input1">
-                <input id="input1" type="submit" onclick="window.location.href='./login.html'" value="注册" id="Submit"/>
-            </div>
+            <input type="password" name="password2" required="required"><span id="tishi"></span><br>
+            <button type="submit" class="btn btn-primary float-right" >注册</button>
         </form>
+    {% if message %}
+        <div class="alert-warning">{{ message }}</div>
+    {% endif %}
     </div>
 </body>
 </html>

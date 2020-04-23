@@ -25,7 +25,7 @@ SECRET_KEY = 'coe7s(*+m+w_37d-(pq5x3dcui0*la!qpdpbl*)euf)#tmw$v1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", '127.0.0.1',]
 
 
 # Application definition
@@ -78,13 +78,20 @@ WSGI_APPLICATION = 'SoftwareProjects.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#数据库信息配置
+import pymysql
+pymysql.install_as_MySQLdb()
+DATABASES={
+    'default':{
+        'ENGINE':'django.db.backends.mysql', #引擎
+        'NAME':'webdb', #名称
+        'USER':'wula',
+        'PASSWORD':'123456',
+        'HOST':'localhost', #服务器地址
+        'PORT':'3306'
     }
-}
 
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -108,9 +115,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
+
 
 USE_I18N = True
 
