@@ -14,7 +14,7 @@ def hash_code(s, salt='mysite'):
     return h.hexdigest()
 
 def ins(request):
-    return redirect(reverse('login'))
+    return redirect(reverse('index'))
 
 def login(request):
     login_form = forms.UserForm()
@@ -76,5 +76,8 @@ def register(request):
     return render(request, 'login/register.html', locals())
 
 def index(request):
-    message=request.session.get('username',"abc")
-    return render(request,'login/index.html',locals())
+    message = request.session.get("username",None)
+    if message:
+        return render(request,'login/index1.html',locals())
+    else:
+        return render(request,'login/index.html',locals())
