@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import path, include, re_path
 
-
 urlpatterns = [
-    path('',include('login.urls')),
     path('admin/', admin.site.urls),
+    path('',include('login.urls')),
+    path('house/',include('house.urls')),
+    path('rent/',include('rent.urls')),
+    path('repair/',include('repair.urls')),
 ]
