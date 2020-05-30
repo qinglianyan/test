@@ -7,8 +7,5 @@ from django.urls import reverse
 from . import models as login_models
 from . import forms
 
-def houses(request):
-    pass
-
-def house(request):
+def detail(request,house_id):
     pass
