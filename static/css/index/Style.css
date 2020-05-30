@@ -545,8 +545,19 @@ BY:王勇
 .grid-products .item .product-image:hover .primary { opacity:0; }
 .grid-products .item .product-image:hover .hover:not(.variantImg) { opacity:1; visibility:visible; }
 <!-- slick自带的属性 -->
+.grid-products .item .product-image .showVariantImg img { opacity:0; visibility:hidden; }
+.grid-products .item .product-image .showVariantImg .variantImg { visibility:visible; opacity:1; }
+.grid-products .item .product-image .showLoading { transition: .5s; animation: loader-rotate .8s infinite linear; background: 0 0 !important; border: 3px solid rgba(100,100,100,.5);     border-top-color: rgba(100, 100, 100, 0.5); border-radius: 100%; border-top-color: #fff; content: ""; height: 34px !important; left: 50%; line-height: 1; margin-left: -17px; margin-top: -17px; pointer-events: none; position: absolute; top: 50% !important; -webkit-animation: loader-rotate .8s infinite linear; width: 34px !important; z-index: 154 !important; }
+.grid-products .item .product-image { position:relative; overflow:hidden; margin:0 auto 15px; }
+.grid-products .item .product-image > a { display:block; white-space:nowrap; opacity:1; }
+.grid-products .item .product-image img { display:inline-block; width:100%; margin:0 auto; vertical-align:middle; -ms-transition:all ease-out 0.4s; -webkit-transition:all ease-out 0.4s; transition:all ease-out 0.4s; }
+.grid-products .item .product-image .hover { visibility:hidden; opacity:0; left:50%; top:50%; position:absolute; -ms-transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%); }
+.grid-products .item .product-image:hover .primary { opacity:0; }
+.grid-products .item .product-image:hover .hover:not(.variantImg) { opacity:1; visibility:visible; }
+.grid-view_image:hover .primary { opacity:0; visibility:hidden; }
+.grid-view_image:hover .hover:not(.variantImg) { opacity:1; visibility:visible; }
 .slick-prev, .slick-next { position:absolute; z-index:9; display:block; height:auto; line-height:normal; font-size:0px; padding:6px 10px; cursor:pointer; background:transparent; color:transparent; top:50%; -webkit-transform:translate(0, -50%); -ms-transform:translate(0, -50%); transform:translate(0, -50%); padding:0; border:none; opacity:0.5; }
-.slick-prev:before, .slick-next:before { font-family:""; font-size:20px; line-height:1; color:#000; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.slick-prev:before, .slick-next:before { font-family:"annimex-icons"; font-size:20px; line-height:1; color:#000; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 .slick-prev:before { content:"\ea8b"; }
 .slick-next::before { content:"\ea8c"; }
 .productSlider:hover .slick-arrow, .productPageSlider:hover .slick-arrow, .productSlider-style1:hover .slick-arrow, .productSlider-style2:hover .slick-arrow,
@@ -561,13 +572,5 @@ BY:王勇
 .productSlider .slick-prev, .productPageSlider .slick-prev, .productSlider-style1 .slick-prev,
 .productSlider-style2 .slick-prev, .productSlider-fullwidth .slick-prev { left:-35px; }
 .grid-products .slick-slider .item, .grid-products.slick-slider .item { margin-bottom:0; }
-<!--房子信息 -->
-.tab_container .grid-products .item { margin-bottom:0; }
-.grid-products .item .product-name a { color:#000; font-size:1em; line-height:1.2; margin-bottom:0; }
-.grid-products .item .product-name a:hover { opacity:0.8; }
-.grid-products .item .product-price { margin:5px 0; color:#000000; font-weight:600; }
-.product-price .old-price { color:#555; font-size:12px; opacity:0.8; text-decoration:line-through; }
-.product-price .old-price + .price { padding-left:5px; color:#e95144 !important; }
-.product-price .price { color:#000000; }
 
 
