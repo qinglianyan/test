@@ -10,6 +10,7 @@ from . import models as rent_models
 from . import forms
 from house.models import house
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.http import FileResponse
 
 def search(request):
     if request.method == "GET":
@@ -176,3 +177,11 @@ def search(request):
 
     return render(request,'rent/search.html',locals())
 #TODO:点击下一页,搜索集变为all();keyword
+
+
+def download_template(request):
+    file = open('static/files/hetong.docx', 'rb')
+    response = FileResponse(file)
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="BatchPayTemplate.xls"'
+    return response
